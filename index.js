@@ -8,7 +8,6 @@ const charRating = document.querySelector("#character-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
-const charFirstApp = document.querySelector("#character-first-appearance")
 const jerryApproved = document.querySelector("#jerry-approved")
 const jerryDisapproved = document.querySelector("#jerry-disapproved")
 
