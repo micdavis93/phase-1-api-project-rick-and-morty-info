@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rick and Morty Information!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content=""/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script defer src="src/index.js"></script>
+</head>
+<body>
+  <!--TITLE BAR-->
+  <h1>Rick and Morty Characters</h1>
+  
+  <!--CHARACTER LIST-->
+  <div id="character-list">
+    <h2>List of Characters>
+    <ul id="character-names">
+      <!--where we place character names as li's-->
+    </ul>
+  </div>
+  
+  <!--CHARACTER INFORMATION-->
+  <!--Starting with Rick Sanchez "[0]"-->
+  <div class="current-character">
+    
+    <!--CHARACTER INFO BLOCK with:
+      IMAGE => LIKES-DISLIKES => NAME => STATUS => ORIGIN => FIRST APPEARANCE-->
+    <div id="character-info">
+      
+      <!--IMAGE-->
+      <img id="character-image" src="assets/dummy.gif" alt="Character's Name">
+      
+      <!--LIKES-DISLIKES-->
+      <div id="character-rating">
+        <!--Place LIKES-DISLIKES or JERRY-METER here-->
+      </div>
+      
+      <!--NAME-->
+      <h4 id="character-name">Character's Name goes here</h4>
+      
+      <!--STATUS-->
+      <p id="character-status">Status: Alive or Dead? HMM???</p>
+      
+      <!--ORIGIN-->
+      <p id="character-origin">Origin: HMMMMMM???!</p>
+      
+      <!--FIRST APPEARANCE-->
+      <p id="character-first-app">First Appeared: ?!?!?!?!</p>
+    </div>
+    
+    <!--COMMENTS BLOCK-->
+    <!--Submit comment with Jerry rating-->
+    <div id="comments-section">
+      
+      <form id="comments-form">
+        <!--Write comment here-->
+        <input type="text" placeholder="Nobody exists on purpose, nobody belongs anywhere, everyone's gonna die. Come write comments." id="comment" name="comment" />
+        
+        <!--Radio button for Squanch meter-->
+        <p>Squanch Rating:</p>
+        <br>
+        <input type="radio" name="emotion" id="zero-squanch" class="input-hidden">
+        <label for="0">No squanch :(</label>
+        <input type="radio" name="emotion" id="one-squanch" class="input-hidden">
+        <label for="1">Kinda squanchin'</label>
+        <input type="radio" name="emotion" id="two-squanch" class="input-hidden">
+        <label for="1">Really squanchin'</label>
+        <input type="radio" name="emotion" id="sad" class="input-hidden">
+        <label for="1">Can't stop squanchin' in here!</label>
+        
+        <!--Submit button-->
+        <input type="submit" value="I'm commentin' heyuh!" />
+      </form>
+      
+      <!--Comments List-->
+      <div id="comments-list">
+        <!--NEW COMMENTS HERE-->
+      </div>
+      
+    </div>
+    
+  </div>
+</body>
+</html>
