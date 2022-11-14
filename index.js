@@ -3,7 +3,7 @@
 
 // Get Request
 {
-fetch("https://rickandmortyapi.com/api/")
+fetch("https://rickandmortyapi.com/api/characters/result")
     .then(r => r.json())
     .then(characters => {
         listCharacters(characters)
