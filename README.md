@@ -18,3 +18,9 @@ The site is intended to present these objects and functionalities:
     6. An updated counter of likes and dislikes (with positive and negative Jerry expressions next to them respectively)
 3. A like-dislike voting button
 4. A comment section for the character with an ability to submit comments
+
+The basic story of your application
+The core features of your MVP
+The API data you'll be using and how you'll use it
+Challenges you expect to face
+How you are meeting the requirements of the project
