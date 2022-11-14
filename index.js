@@ -1,4 +1,7 @@
 // Create global variables
+//Character List
+const charNameList = documment.querySelector("#character-names")
+
 // Character Info
 const charImg = document.querySelector("#character-image")
 const charRating = document.querySelector("#character-rating")
@@ -20,11 +23,18 @@ fetch("https://rickandmortyapi.com/api/characters/result")
     })
 
 // Declare and define functions
+
 function listCharacters(character){
     forEach(character => {
+        const nav = document.createElement("nav");
+        nav.innerText = character.name;
+        charNameList.append(nav);
 
-    })
-}
+        nav.addEventListener("click", (e) => {
+            showInformation(current)
+        });
+    });
+};
 
 // function listCharacters(charData){
 //     const charBar = document.querySelector("#character-bar")
