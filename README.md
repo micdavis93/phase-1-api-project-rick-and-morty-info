@@ -3,6 +3,7 @@
 This Rick and Morty Information Website is being programmed as the Phase 1 project for Flatiron School cohort 103122.
 
 This has been seen and APPROOOOOOOVED by Kali.
+Mike has branched this inside of VS Code
 
 ## Student Collaborators
 Kali Deming <br>
