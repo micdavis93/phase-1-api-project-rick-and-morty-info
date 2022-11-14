@@ -23,3 +23,5 @@ The Rick and Morty Information Website will include three distinct event listene
 
 ## Potential Challenges
 The challenges we currently expect to encounter primarily revolve around simplification. It's incredibly easy to allow creativity and desire to achieve presently unattainable goals to complicate an otherwise uncomplicated project. However, so long as we keep our outlined objectives in mind, we believe we'll be able to streamline this project, meeting the deliverables via clean and concise code. 
+
+OH GEEZ RICK
