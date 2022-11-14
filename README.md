@@ -19,7 +19,7 @@ The Rick and Morty Information Website will include three distinct event listene
 
 4. The selected character will be accompanied by a like/dislike function, which will increment appropriately with each user interaction. This functionality will also include a 'click' event listener.
 
-5. The selected character will also be accompanied by a comment section. The user will be able to write a comment and post said comment for other users to view. This comment feature will include a 'submit' event. 
+5. The selected character will also be accompanied by a comment section. The user will be able to write a comment and post said comment for other users to view. This comment feature will include a 'submit' event. These comments will persist across all users. 
 
 ## Potential Challenges
 The challenges we currently expect to encounter primarily revolve around simplification. It's incredibly easy to allow creativity and desire to achieve presently unattainable goals to complicate an otherwise uncomplicated project. However, so long as we keep our outlined objectives in mind, we believe we'll be able to streamline this project, meeting the deliverables via clean and concise code. 
