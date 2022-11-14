@@ -2,6 +2,8 @@
 
 This Rick and Morty Information Website is being programmed as the Phase 1 project for Flatiron School cohort 103122.
 
+This has been seen and APPROOOOOOOVED by Kali.
+
 ## Student Collaborators
 Kali Deming <br>
 Mike Davis
