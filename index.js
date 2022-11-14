@@ -1,6 +1,6 @@
 // Create global variables
-//Character List
-const charNameList = documment.querySelector("#character-names")
+// Character List
+const charNameList = document.querySelector("#character-names")
 
 // Character Info
 const charImg = document.querySelector("#character-image")
@@ -12,59 +12,42 @@ const charFirstApp = document.querySelector("#character-first-appearance")
 const jerryApproved = document.querySelector("#jerry-approved")
 const jerryDisapproved = document.querySelector("#jerry-disapproved")
 
+// Comments
 const commentsForm = document.querySelector("#comments-form")
 const commentsList = document.querySelector("#comments-list")
 
 // Get Request
-fetch("https://rickandmortyapi.com/api/characters/results")
+{
+fetch("https://rickandmortyapi.com/api/character")
     .then(r => r.json())
-    .then(characters => {
+    .then(data => {
+        const characters = data.results.filter(character => character.id<6)
         listCharacters(characters)
-        showInformation(characters[0])
+        showInformation(characters[2])
     })
+}
+
 
 // Declare and define functions
-
-function listCharacters(character){
-    forEach(character => {
+function listCharacters(characters){
+    characters.forEach(character => {
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
         charNameList.append(h5);
 
-        nav.addEventListener("click", (e) => {
-            showInformation(current)
+        h5.addEventListener("click", (e) => {
+            showInformation(character)
         });
     });
 };
 
-function showInformation(current){
-    charImg.src = current.image
-    charName.innerText = current.name
+function showInformation(character){
+    charImg.src = character.image
+    charName.innerText = character.name
 
-
-    submitComment(current)
+    submitComment(character)
 }
 
 function jerryRating(current){
-        ticketButton.addEventListener("click", ()=>{
-        tixBought.innerText = `${current.tickets_bought ++} Tickets Bought``
-}
-
-// 2. SHOW DETAILS function
-// function showDetails(current){
-//     charName.innerText = current.name
-//     charImg.src = current.image
-//     voteCount.innerText = current.votes
-
-//     voteSubmit(current)
-// }
-
-// function buyTicket(){
-//     ticketButton.addEventListener("click", ()=>{
-//         tixBought.innerText = `${current.tickets_bought ++} Tickets Bought`
-//     })
-// }
-
-function submitComment(current){
 
 }
