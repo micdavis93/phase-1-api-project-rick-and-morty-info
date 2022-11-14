@@ -8,7 +8,6 @@ const charRating = document.querySelector("#character-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
-const charFirstApp = document.querySelector("#character-first-appearance")
 const jerryApproved = document.querySelector("#jerry-approved")
 const jerryDisapproved = document.querySelector("#jerry-disapproved")
 
@@ -44,10 +43,17 @@ function listCharacters(characters){
 function showInformation(character){
     charImg.src = character.image
     charName.innerText = character.name
+    charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
+    charOrigin.innerText = `WHERE DO THEY ORIGINATE BRUH??!?!!?!: ${character.origin.name}`
 
     submitComment(character)
+    jerryRating(character)
 }
 
-function jerryRating(current){
+function jerryRating(character){
+
+}
+
+function submitComment(character){
 
 }
