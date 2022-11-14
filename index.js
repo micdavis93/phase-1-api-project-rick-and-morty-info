@@ -12,15 +12,12 @@ const commentsForm = document.querySelector("#comments-form")
 const commentsList = document.querySelector("#comments-list")
 
 // Get Request
-{
 fetch("https://rickandmortyapi.com/api/characters/result")
     .then(r => r.json())
     .then(characters => {
         listCharacters(characters)
         showInformation(characters[0])
     })
-
-}
 
 // Declare and define functions
 function listCharacters(character){
