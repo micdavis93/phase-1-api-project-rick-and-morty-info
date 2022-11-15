@@ -18,14 +18,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Michroma" rel="stylesheet">
   <script defer src="/index.js"></script>
 </head>
-<body style="background-color: black; color: #48f4eb;">
+<body>
   <!--TITLE BAR-->
-<img src="images/Rick-And-Morty-Logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 80%;">
+<img id="logo" src="images/Rick-And-Morty-Logo.png">
   
   <!--CHARACTER LIST-->
   <div id="character-list">
-    <h2 style="font-family: Gloria Hallelujah;">Characters</h2>
-    <nav id="character-names" style="font-family: Syne Mono;">
+    <h2>Characters</h2>
+    <nav id="character-names">
       <!--where we place character names as li's-->
     </nav>
   </div>
@@ -37,7 +37,7 @@
     <!--CHARACTER INFO BLOCK with:
       IMAGE => LIKES-DISLIKES => NAME => STATUS => ORIGIN => FIRST APPEARANCE-->
     <div id="character-info">
-      
+      <h4 class="section-header">Character Information</h4>
       <!--IMAGE-->
       <img id="character-image" src="" alt="Character Image">
       
@@ -51,10 +51,10 @@
         </div>
       </div>
       
-      <h4 id="character-name" style="font-family: Syne Mono; font-size: 30px">Character's Name goes here</h4>
+      <h4 id="character-name">Character's Name goes here</h4>
       
       <h5></h5>
-      <p id="character-status" style="font-family: Source Code Pro; font-style: italic;">Status: Alive or Dead? HMM???</p>
+      <p id="character-status">Status: Alive or Dead? HMM???</p>
       
       <h5></h5>
       <p id="character-origin">Origin: HMMMMMM???!</p>
@@ -64,13 +64,13 @@
     <!--COMMENTS BLOCK-->
     <!--Submit comment with Jerry rating-->
     <div id="comments-section">
-      
+      <h4 class="section-header">Comment here broh</h4>
       <form id="comments-form">
         <!--Write comment here-->
-        <input type="text" placeholder="Nobody exists on purpose, nobody belongs anywhere, everyone's gonna die. Come write comments." id="comment" name="comment" />
+        <textarea type="text" placeholder="Nobody exists on purpose, nobody belongs anywhere, everyone's gonna die. Come write comments." id="comment-input" name="comment"></textarea>
 
         <!--Submit button-->
-        <input type="submit" value="I'm commentin' heyuh!" />
+        <input type="submit" value="I'm commentin' heyuh!"/>
       </form>
       
       <!--Comments List-->

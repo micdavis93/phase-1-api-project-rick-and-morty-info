@@ -1,1 +1,55 @@
+/* Tags */
+body {
+    background-color: black;
+    color: #48f4eb;
+}
 
+/* Class */
+.section-header {
+    font-family: Gloria Hallelujah;
+    font-size: 30px;
+}
+
+/* IDs */
+#logo {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 80%;
+}
+
+#character-list h2 {
+    font-family: Gloria Hallelujah;  
+}
+
+#character-names {
+    font-family: Syne Mono;
+}
+
+#character-name {
+    font-family: Syne Mono; 
+    font-size: 30px;
+}
+
+#character-status {
+    font-family: Source Code Pro;
+}
+
+#character-origin {
+    font-family: Source Code Pro;
+}
+
+#comment-input {
+    color: black;
+    font-family: Michroma;
+    font-size: 8px;
+    width: 300px;
+    height: 50px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Attributes */
+[type="submit"] {
+    font-family: Michroma;
+}

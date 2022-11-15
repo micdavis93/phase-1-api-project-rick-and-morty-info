@@ -44,7 +44,7 @@ function showInformation(character){
     charImg.src = character.image
     charName.innerText = character.name
     charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
-    charOrigin.innerText = `WHERE DO THEY ORIGINATE BRUH??!?!!?!: ${character.origin.name}`
+    charOrigin.innerText = `HOME PLANET BROH?!: ${character.origin.name}`
 
     submitComment(character)
     jerryRating(character)
