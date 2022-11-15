@@ -8,8 +8,10 @@ const charRating = document.querySelector("#character-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
-const jerryApproved = document.querySelector("#jerry-approved")
-const jerryDisapproved = document.querySelector("#jerry-disapproved")
+const jerryApprovedButton = document.querySelector("#jerry-approved-button")
+const jerryDisapprovedButton = document.querySelector("#jerry-disapproved-button")
+const jerryApprovedCounter = document.querySelector("#jerry-approved-counter")
+const jerryDisapprovedCounter = document.querySelector("#jerry-disapproved-counter")
 
 // Comments
 const commentsForm = document.querySelector("#comments-form")
@@ -51,7 +53,17 @@ function showInformation(character){
 }
 
 function jerryRating(character){
+    jerryApprovedButton.addEventListener("click", e=>{
+        let counter = Number(jerryApprovedCounter.innerText)
+        counter++
+        jerryApprovedCounter.innerText = counter
+    })
 
+    jerryDisapprovedButton.addEventListener("click", e=>{
+        let counter = Number(jerryDisapprovedCounter.innerText)
+        counter++
+        jerryDisapprovedCounter.innerText = counter
+    })
 }
 
 function submitComment(character){
