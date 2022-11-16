@@ -4,6 +4,12 @@ body {
     color: #48f4eb;
 }
 
+h1 {
+    font-family: Gloria Hallelujah;
+    font-size: 200%;
+    text-align: center;
+}
+
 /* Class */
 .section-header {
     font-family: Gloria Hallelujah;
