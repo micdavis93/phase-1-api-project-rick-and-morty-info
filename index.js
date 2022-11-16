@@ -4,68 +4,70 @@ const charNameList = document.querySelector("#character-names")
 
 // Character Info
 const charImg = document.querySelector("#character-image")
-const charRating = document.querySelector("#character-rating")
+const charRating = document.querySelector("#jerry-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
 const jerryApprovedButton = document.querySelector("#jerry-approved-button")
 const jerryDisapprovedButton = document.querySelector("#jerry-disapproved-button")
-const jerryApprovedCounter = document.querySelector("#jerry-approved-counter")
-const jerryDisapprovedCounter = document.querySelector("#jerry-disapproved-counter")
+const jerryRating = document.querySelector("#jerry-approved-counter")
 
 // Comments
 const commentsForm = document.querySelector("#comments-form")
 const commentsList = document.querySelector("#comments-list")
 
-// Get Request
-{
-fetch("https://rickandmortyapi.com/api/character")
-    .then(r => r.json())
+// API Get Request
+Promise.all([
+    fetch("https://rickandmortyapi.com/api/character").then(r => r.json()),
+    fetch("http://localhost:3000/characters").then(r => r.json())
+    ])
     .then(data => {
-        const characters = data.results.filter(character => character.id<6)
+        const API = data[0].results.filter(character => character.id<6)
+        const JSON = data[1]
+        const characters = [API, JSON]
         listCharacters(characters)
-        showInformation(characters[2])
+        showInformation(characters[0][2])
+        showJerryRating(characters[1][2])
     })
-}
-
 
 // Declare and define functions
 function listCharacters(characters){
-    characters.forEach(character => {
+    const charactersAPI = characters[0]
+    const charactersJSON = characters[1]
+    
+    charactersAPI.forEach(character => {
+        const characterID = character.id
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
         charNameList.append(h5);
 
         h5.addEventListener("click", (e) => {
             showInformation(character)
+            showJerryRating(charactersJSON[(characterID-1)])
         });
     });
 };
 
-function showInformation(character){
-    charImg.src = character.image
-    charName.innerText = character.name
-    charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
-    charOrigin.innerText = `HOME PLANET BROH?!: ${character.origin.name}`
-
-    submitComment(character)
-    jerryRating(character)
+function showInformation(characterAPI){
+    charImg.src = characterAPI.image
+    charName.innerText = characterAPI.name
+    charStatus.innerText = `Alive... OR DEAD?!: ${characterAPI.status}`
+    charOrigin.innerText = `HOME PLANET BROH?!: ${characterAPI.origin.name}`
 }
 
-function jerryRating(character){
-    jerryApprovedButton.addEventListener("click", e=>{
-        let counter = Number(jerryApprovedCounter.innerText)
-        counter++
-        jerryApprovedCounter.innerText = counter
+function showJerryRating(character){
+    let rating = character.rating
+    jerryRating.innerText = rating
+    jerryApprovedButton.addEventListener("click", e =>{
+        rating ++
+        jerryRating.innerText = rating
     })
-
-    jerryDisapprovedButton.addEventListener("click", e=>{
-        let counter = Number(jerryDisapprovedCounter.innerText)
-        counter++
-        jerryDisapprovedCounter.innerText = counter
+    jerryDisapprovedButton.addEventListener("click", e =>{
+        rating --
+        jerryRating.innerText = rating
     })
 }
 
-function submitComment(character){
+// function submitComment(character){
 
-}
+// }

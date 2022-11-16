@@ -1,0 +1,29 @@
+{
+    "characters": [       
+        {
+            "id": 1,
+            "name": "Rick Sanchez",
+            "rating": 1
+        },
+        {
+            "id": 2,
+            "name": "Morty Smith",
+            "rating": 2
+        },
+        {
+            "id": 3,
+            "name": "Summer Smith",
+            "rating": 3
+        },
+        {
+            "id": 4,
+            "name": "Beth Smith",
+            "rating": 4
+        },
+        {
+            "id": 5,
+            "name": "Jerry Smith",
+            "rating": 5
+        }
+    ]
+}
