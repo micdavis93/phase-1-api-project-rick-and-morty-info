@@ -36,11 +36,11 @@ function listCharacters(characters){
     const charactersJSON = characters[1]
     
     charactersAPI.forEach(character => {
-        const characterID = character.id
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
         charNameList.append(h5);
 
+        const characterID = character.id
         h5.addEventListener("click", (e) => {
             showInformation(character)
             showJerryRating(charactersJSON[(characterID-1)])
