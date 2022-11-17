@@ -28,40 +28,8 @@
     <nav id="character-names">
       <!--where we place character names as li's-->
     </nav>
-  </div>
-  
-  <!--CHARACTER INFORMATION-->
-  <!--Starting with Rick Sanchez "[0]"-->
-  <div class="current-character">
-    
-    <!--CHARACTER INFO BLOCK with:
-      IMAGE => LIKES-DISLIKES => NAME => STATUS => ORIGIN => FIRST APPEARANCE-->
-    <div id="character-info">
-      <h4 class="section-header">Character Information</h4>
-      <!--IMAGE-->
-      <img id="character-image" src="" alt="Character Image">
-      
-      <!--LIKES-DISLIKES-->
-      <div id="jerry-rating" class="hover-white">
-        <img class="jerry-button" id="jerry-approved-button" src="/images/Jerry Approve FINAL.png">
-        <p id="jerry-approved-counter">0</p>
-        <img class="jerry-button" id="jerry-disapproved-button" src="/images/Jerry Disapprove FINAL.png">
-      </div>
-      
-      <h4 id="character-name">Character's Name goes here</h4>
-      
-      <h5></h5>
-      <p id="character-status">Status: Alive or Dead? HMM???</p>
-      
-      <h5></h5>
-      <p id="character-origin">Origin: HMMMMMM???!</p>
-      
-    </div>
-    
-    <!--COMMENTS BLOCK-->
-    <!--Submit comment with Jerry rating-->
     <div id="comments-section">
-      <h4 class="section-header">Comment here broh</h4>
+      <h4 class="section-header">COMMENT HERE BROH</h4>
       <form id="comments-form">
         <!--Write comment here-->
         <textarea type="text" placeholder="Nobody exists on purpose, nobody belongs anywhere, everyone's gonna die. Come write comments." id="comment-input" name="comment"></textarea>
@@ -76,6 +44,37 @@
       </div>
       
     </div>
+  </div>
+  
+  <!--CHARACTER INFORMATION-->
+  <!--Starting with Rick Sanchez "[0]"-->
+  <div id="current-character">
+    
+    <!--CHARACTER INFO BLOCK with:
+      IMAGE => LIKES-DISLIKES => NAME => STATUS => ORIGIN => FIRST APPEARANCE-->
+    <div id="character-info">
+      <div id="name-and-image">
+        <h4 class="section-header" id="character-name">Character Name</h4>
+        <img id="character-image" src="" alt="Character Image">
+      </div>
+      <div id="status-and-origin">
+        <p id="character-status">Status: Alive or Dead? HMM???</p>
+        <p id="character-origin">Origin: HMMMMMM???!</p>
+      </div>
+      <!--LIKES-DISLIKES-->
+      <div id="jerry-rating" class="hover-white">
+        <img class="jerry-button" id="jerry-approved-button" src="/images/Jerry Approve FINAL.png">
+        <p id="jerry-approved-counter">0</p>
+        <img class="jerry-button" id="jerry-disapproved-button" src="/images/Jerry Disapprove FINAL.png">
+      </div>
+      
+     
+      
+    </div>
+    
+    <!--COMMENTS BLOCK-->
+    <!--Submit comment with Jerry rating-->
+    
     
   </div>
 </body>

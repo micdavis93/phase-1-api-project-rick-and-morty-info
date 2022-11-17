@@ -44,19 +44,19 @@ function listCharacters(characters){
         h5.className = "character-selector"
         charNameList.append(h5);
 
+        h5.addEventListener("click", ()=>{
+            const characters = document.querySelectorAll(".character-selector")
+            characters.forEach(character => {
+                character.classList.remove("current-name")
+            })
+            showInformation(character)
+            h5.classList.add("current-name")
+        })
         h5.addEventListener("mouseover", ()=>{
             h5.classList.add("hover-white")
-            // console.log(`${character.id} mouseover`)
         })
         h5.addEventListener("mouseout", ()=>{
             h5.classList.remove("hover-white")
-            // console.log(`${character.id} mouseout`)
-        })
-        h5.addEventListener("click", ()=>{
-            console.log(document.querySelectorAll(".character-selector"))
-            // .classList.remove("hover-white2")
-            showInformation(character)
-            h5.classList.add("hover-white2")
         })
     });
 };
@@ -72,22 +72,42 @@ function showInformation(character){
 }
 
 function jerryButtons(){
+    // Approved
     jerryApprovedButton.addEventListener("click", ()=>{
         currentCharacter.rating ++
         jerryRating.innerText = currentCharacter.rating
         console.log(currentCharacter.rating)
     })
+    jerryApprovedButton.addEventListener("mouseover", ()=>{
+        jerryApprovedButton.src = "/images/Jerry Approve HOVER FINAL.png"
+        jerryApprovedButton.style = "width: 160px;"
+    })
+    jerryApprovedButton.addEventListener("mouseout", ()=>{
+        jerryApprovedButton.src = "/images/Jerry Approve FINAL.png"
+        jerryApprovedButton.style = "width: 150px;"
+    })
+
+    // Disapproved
     jerryDisapprovedButton.addEventListener("click", ()=>{
         currentCharacter.rating --
         jerryRating.innerText = currentCharacter.rating
         console.log(currentCharacter.rating)
     })
+    jerryDisapprovedButton.addEventListener("mouseover", ()=>{
+        jerryDisapprovedButton.src = "/images/Jerry Disapprove HOVER FINAL.png"
+        jerryDisapprovedButton.style = "width: 160px;"
+    })
+    jerryDisapprovedButton.addEventListener("mouseout", ()=>{
+        jerryDisapprovedButton.src = "/images/Jerry Disapprove FINAL.png"
+        jerryDisapprovedButton.style = "width: 150px;"
+    })
 }
 
 function submitComment(character){
-
+    commentForm.addEventListener("submit", (e)=> {
+        e.preventDefault()
+    })
 }
-
 // function submitComment(){
 //     commentForm.addEventListener("submit", (e)=> {
 //         e.preventDefault()

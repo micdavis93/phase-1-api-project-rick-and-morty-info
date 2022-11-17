@@ -10,10 +10,14 @@ h1 {
     text-align: center;
 }
 
+h5 {
+    cursor: pointer;
+}
+
 /* Class */
 .section-header {
     font-family: Gloria Hallelujah;
-    font-size: 30px;
+    font-size: 18px;
 }
 .hover-white{
     color: #ffffff;
@@ -30,6 +34,53 @@ h1 {
     width: 80%;
 }
 
+#character-list {
+    display: block;
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+
+#current-character {
+    /* display: block; */
+    position: relative;
+    width: 75%;
+    margin-left: auto;
+}
+
+.current-name {
+    color: white;
+}
+
+#character-info {
+    display: block;
+    position: relative;
+    width: 100%;
+    /* float: right; */
+}
+
+#name-and-image {
+    display: block;
+    width: 45%;
+    float: left;
+}
+
+#status-and-origin {
+    /* float:right; */
+    position: relative;
+    text-align: left;
+}
+/* #character-name {
+    font-size: 35px;
+    margin-top: auto;
+    font-family: Gloria Hallelujah;
+} */
+
+#comments-section {
+    display: block;
+    float: left;
+}
+
 #character-list h2 {
     font-family: Gloria Hallelujah;  
 }
@@ -40,7 +91,9 @@ h1 {
 
 #character-name {
     font-family: Syne Mono;
-    font-size: 30px;
+    font-size: 45px;
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 
 #character-status {
@@ -55,18 +108,25 @@ h1 {
     color: black;
     font-family: Michroma;
     font-size: 8px;
-    width: 300px;
-    height: 50px;
-    word-wrap: break-word;
-    word-break: break-all;
+    width: 80%;
+    height: 60px;
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
+    align-items: right;
 }
 
 #character-image {
+    display: block;
     border: 3px solid #48f4eb;
     border-radius: 20px;
 }
 
+#jerry-rating {
+    position: relative;
+}
+
 #jerry-rating img {
+    cursor: pointer;
     -webkit-filter: drop-shadow(0px 0px 10px #ababab);
     /* filter: drop-shadow(5px 5px 5px #ffffff); */
     }
@@ -74,9 +134,14 @@ h1 {
     opacity: 0.5;
 }
 
+#jerry-approved-counter {
+    font-family: Gloria Hallelujah;
+    color: #48f4eb;
+}
 /* Attributes */
 [type="submit"] {
     font-family: Michroma;
+    width: auto;
 }
 
 /* Pseudo Classes */
