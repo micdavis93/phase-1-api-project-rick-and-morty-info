@@ -1,10 +1,12 @@
 // Create global variables
+let currentCharacter
+
 // Character List
 const charNameList = document.querySelector("#character-names")
 
 // Character Info
 const charImg = document.querySelector("#character-image")
-const charRating = document.querySelector("#jerry-rating")
+// const charRating = document.querySelector("#jerry-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
@@ -24,47 +26,48 @@ Promise.all([
     .then(data => {
         const API = data[0].results.filter(character => character.id<6)
         const JSON = data[1]
-        const characters = [API, JSON]
+        const characters = []
+            {for (let i = 0; i < API.length; i++){
+                characters.push({...API[i], ...JSON[i]})
+            }}
         listCharacters(characters)
-        showInformation(characters[0][2])
-        showJerryRating(characters[1][2])
+        showInformation(characters[0])
+        jerryButtons()
     })
 
 // Declare and define functions
 function listCharacters(characters){
-    const charactersAPI = characters[0]
-    const charactersJSON = characters[1]
-    
-    charactersAPI.forEach(character => {
+    characters.forEach(character => {
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
         charNameList.append(h5);
 
-        const characterID = character.id
         h5.addEventListener("click", (e) => {
             showInformation(character)
-            showJerryRating(charactersJSON[(characterID-1)])
-        });
+        })
     });
 };
 
-function showInformation(characterAPI){
-    charImg.src = characterAPI.image
-    charName.innerText = characterAPI.name
-    charStatus.innerText = `Alive... OR DEAD?!: ${characterAPI.status}`
-    charOrigin.innerText = `HOME PLANET BROH?!: ${characterAPI.origin.name}`
+function showInformation(character){
+    currentCharacter = character
+
+    charImg.src = character.image
+    charName.innerText = character.name
+    charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
+    charOrigin.innerText = `HOME PLANET BROH?!: ${character.origin.name}`
+    jerryRating.innerText = character.rating
 }
 
-function showJerryRating(character){
-    let rating = character.rating
-    jerryRating.innerText = rating
-    jerryApprovedButton.addEventListener("click", e =>{
-        rating ++
-        jerryRating.innerText = rating
+function jerryButtons(){
+    jerryApprovedButton.addEventListener("click", ()=>{
+        currentCharacter.rating ++
+        jerryRating.innerText = currentCharacter.rating
+        console.log(currentCharacter.rating)
     })
-    jerryDisapprovedButton.addEventListener("click", e =>{
-        rating --
-        jerryRating.innerText = rating
+    jerryDisapprovedButton.addEventListener("click", ()=>{
+        currentCharacter.rating --
+        jerryRating.innerText = currentCharacter.rating
+        console.log(currentCharacter.rating)
     })
 }
 
