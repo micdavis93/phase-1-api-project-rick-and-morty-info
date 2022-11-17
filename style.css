@@ -15,6 +15,12 @@ h1 {
     font-family: Gloria Hallelujah;
     font-size: 30px;
 }
+.hover-white{
+    color: #ffffff;
+}
+.hover-white2{
+    color: #ffffff;
+}
 
 /* IDs */
 #logo {
@@ -33,7 +39,7 @@ h1 {
 }
 
 #character-name {
-    font-family: Syne Mono; 
+    font-family: Syne Mono;
     font-size: 30px;
 }
 
@@ -55,7 +61,25 @@ h1 {
     word-break: break-all;
 }
 
+#character-image {
+    border: 3px solid #48f4eb;
+    border-radius: 20px;
+}
+
+#jerry-rating img {
+    -webkit-filter: drop-shadow(0px 0px 10px #ababab);
+    /* filter: drop-shadow(5px 5px 5px #ffffff); */
+    }
+#jerry-rating img:hover {
+    opacity: 0.5;
+}
+
 /* Attributes */
 [type="submit"] {
     font-family: Michroma;
 }
+
+/* Pseudo Classes */
+
+
+/* Mike Edits */

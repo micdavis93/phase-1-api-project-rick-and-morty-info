@@ -30,6 +30,7 @@ Promise.all([
             {for (let i = 0; i < API.length; i++){
                 characters.push({...API[i], ...JSON[i]})
             }}
+        console.log(characters)
         listCharacters(characters)
         showInformation(characters[0])
         jerryButtons()
@@ -40,10 +41,22 @@ function listCharacters(characters){
     characters.forEach(character => {
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
+        h5.className = "character-selector"
         charNameList.append(h5);
 
-        h5.addEventListener("click", (e) => {
+        h5.addEventListener("mouseover", ()=>{
+            h5.classList.add("hover-white")
+            // console.log(`${character.id} mouseover`)
+        })
+        h5.addEventListener("mouseout", ()=>{
+            h5.classList.remove("hover-white")
+            // console.log(`${character.id} mouseout`)
+        })
+        h5.addEventListener("click", ()=>{
+            console.log(document.querySelectorAll(".character-selector"))
+            // .classList.remove("hover-white2")
             showInformation(character)
+            h5.classList.add("hover-white2")
         })
     });
 };
@@ -71,6 +84,16 @@ function jerryButtons(){
     })
 }
 
-// function submitComment(character){
+function submitComment(character){
 
+}
+
+// function submitComment(){
+//     commentForm.addEventListener("submit", (e)=> {
+//         e.preventDefault()
+//         const p = document.createElement("p")
+//         p.innerText = e.target["comment-input"].value
+//         exComments.append(p)
+//         commentForm.reset()
+//     })
 // }
