@@ -1,4 +1,5 @@
-// Create global variables
+{ /* Create global variables */
+// Reassignables
 let currentCharacter
 let currentComments
 
@@ -7,19 +8,20 @@ const charNameList = document.querySelector("#character-names")
 
 // Character Info
 const charImg = document.querySelector("#character-image")
-// const charRating = document.querySelector("#jerry-rating")
 const charName = document.querySelector("#character-name")
 const charStatus = document.querySelector("#character-status")
 const charOrigin = document.querySelector("#character-origin")
 const jerryApprovedButton = document.querySelector("#jerry-approved-button")
 const jerryDisapprovedButton = document.querySelector("#jerry-disapproved-button")
-const jerryRating = document.querySelector("#jerry-approved-counter")
+const jerryRating = document.querySelector("#jerry-rating-counter")
 
 // Comments
 const commentsForm = document.querySelector("#comments-form")
 const comments = document.querySelector("#comments-list")
+}
 
-// API Get Request
+//
+{ /* Get Request*/
 Promise.all([
     fetch("https://rickandmortyapi.com/api/character").then(r => r.json()),
     fetch("http://localhost:3000/characters").then(r => r.json())
@@ -38,6 +40,7 @@ Promise.all([
         jerryButtons()
         submitComment()
     })
+}
 
 // Declare and define functions
 function listCharacters(characters){
@@ -56,6 +59,7 @@ function listCharacters(characters){
             showInformation(character)
             h5.classList.add("current-name")
         })
+
         h5.addEventListener("mouseover", ()=>{
             h5.classList.add("hover-white")
         })
@@ -74,6 +78,7 @@ function showInformation(character){
     charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
     charOrigin.innerText = `HOME PLANET BROH?!: ${character.origin.name}`
     jerryRating.innerText = character.rating
+
     showComments(character)
 }
 
@@ -84,6 +89,7 @@ function jerryButtons(){
         jerryRating.innerText = currentCharacter.rating
         console.log(currentCharacter.rating)
     })
+
     jerryApprovedButton.addEventListener("mouseover", ()=>{
         jerryApprovedButton.src = "/images/Jerry Approve HOVER FINAL.png"
         jerryApprovedButton.style = "width: 160px;"
@@ -99,6 +105,7 @@ function jerryButtons(){
         jerryRating.innerText = currentCharacter.rating
         console.log(currentCharacter.rating)
     })
+
     jerryDisapprovedButton.addEventListener("mouseover", ()=>{
         jerryDisapprovedButton.src = "/images/Jerry Disapprove HOVER FINAL.png"
         jerryDisapprovedButton.style = "width: 160px;"
