@@ -3,27 +3,52 @@
         {
             "id": 1,
             "name": "Rick Sanchez",
-            "rating": 100
+            "rating": 100,
+            "comments": [
+                "Rick Comment 1",
+                "Rick Comment 2",
+                "Rick Comment 3"
+            ]
         },
         {
             "id": 2,
             "name": "Morty Smith",
-            "rating": 2
+            "rating": 2,
+            "comments": [
+                "Morty Comment 1",
+                "Morty Comment 2",
+                "Morty Comment 3"
+            ]
         },
         {
             "id": 3,
             "name": "Summer Smith",
-            "rating": 3
+            "rating": 3,
+            "comments": [
+                "Summer Comment 1",
+                "Summer Comment 2",
+                "Summer Comment 3"
+            ]
         },
         {
             "id": 4,
             "name": "Beth Smith",
-            "rating": 4
+            "rating": 4,
+            "comments": [
+                "Beth Comment 1",
+                "Beth Comment 2",
+                "Beth Comment 3"
+            ]
         },
         {
             "id": 5,
             "name": "Jerry Smith",
-            "rating": 5
+            "rating": 5,
+            "comments": [
+                "Jerry Comment 1",
+                "Jerry Comment 2",
+                "Jerry Comment 3"
+            ]
         }
     ]
 }

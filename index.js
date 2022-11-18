@@ -1,5 +1,6 @@
 // Create global variables
 let currentCharacter
+let currentComments
 
 // Character List
 const charNameList = document.querySelector("#character-names")
@@ -16,7 +17,7 @@ const jerryRating = document.querySelector("#jerry-approved-counter")
 
 // Comments
 const commentsForm = document.querySelector("#comments-form")
-const commentsList = document.querySelector("#comments-list")
+const comments = document.querySelector("#comments-list")
 
 // API Get Request
 Promise.all([
@@ -31,9 +32,11 @@ Promise.all([
                 characters.push({...API[i], ...JSON[i]})
             }}
         console.log(characters)
+        currentCharacter = characters[0]
         listCharacters(characters)
-        showInformation(characters[0])
+        showInformation(currentCharacter)
         jerryButtons()
+        submitComment()
     })
 
 // Declare and define functions
@@ -49,6 +52,7 @@ function listCharacters(characters){
             characters.forEach(character => {
                 character.classList.remove("current-name")
             })
+
             showInformation(character)
             h5.classList.add("current-name")
         })
@@ -63,12 +67,14 @@ function listCharacters(characters){
 
 function showInformation(character){
     currentCharacter = character
+    currentComments = character.comments
 
     charImg.src = character.image
     charName.innerText = character.name
     charStatus.innerText = `Alive... OR DEAD?!: ${character.status}`
     charOrigin.innerText = `HOME PLANET BROH?!: ${character.origin.name}`
     jerryRating.innerText = character.rating
+    showComments(character)
 }
 
 function jerryButtons(){
@@ -103,11 +109,33 @@ function jerryButtons(){
     })
 }
 
-function submitComment(character){
-    commentForm.addEventListener("submit", (e)=> {
+function showComments(currentCharacter){
+    currentComments = document.querySelectorAll(".comment")
+    currentComments.forEach(comment => {
+        comment.remove()
+    })
+    currentCharacter.comments.forEach(comment => {
+        const p = document.createElement("p")
+        p.innerText = comment
+        p.className = "comment"
+        comments.append(p)
+    })
+    currentComments = document.querySelectorAll(".comment")
+}
+
+function submitComment(){
+    commentsForm.addEventListener("submit", (e)=> {
         e.preventDefault()
+        const p = document.createElement("p")
+        p.innerText = e.target["comment-input"].value
+        p.className = "comment"
+        comments.append(p)
+        currentCharacter.comments.push(p.textContent)
+        commentsForm.reset()
+        console.log(currentCharacter.comments)
     })
 }
+
 // function submitComment(){
 //     commentForm.addEventListener("submit", (e)=> {
 //         e.preventDefault()
