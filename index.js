@@ -1,10 +1,10 @@
-{ /* Global Variables */
+/* Global Variables */
 // Reassignables
 let currentCharacter
 let currentComments
 
 // Character List
-const charNameList = document.querySelector("#character-names")
+const charNav = document.querySelector("#character-nav")
 
 // Character Info
 const charImg = document.querySelector("#character-image")
@@ -18,9 +18,8 @@ const jerryRating = document.querySelector("#jerry-rating-counter")
 // Comments
 const commentsForm = document.querySelector("#comments-form")
 const comments = document.querySelector("#comments-list")
-}
 
-{ /* Get Request*/
+/* Get Request*/
 Promise.all([
     fetch("https://rickandmortyapi.com/api/character").then(r => r.json()),
     fetch("http://localhost:3000/characters").then(r => r.json())
@@ -39,15 +38,14 @@ Promise.all([
         jerryButtons()
         submitComment()
     })
-}
 
-{ /* Function Declarations */
+/* Function Declarations */
 function listCharacters(characters){
     characters.forEach(character => {
         const h5 = document.createElement("h5");
         h5.innerText = character.name;
         h5.className = "character-selector"
-        charNameList.append(h5);
+        charNav.append(h5);
 
         h5.addEventListener("click", ()=>{
             const characters = document.querySelectorAll(".character-selector")
@@ -140,5 +138,4 @@ function submitComment(){
         commentsForm.reset()
         console.log(currentCharacter.comments)
     })
-}
 }
