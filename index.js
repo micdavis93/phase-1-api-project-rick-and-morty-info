@@ -1,4 +1,4 @@
-{ /* Create global variables */
+{ /* Global Variables */
 // Reassignables
 let currentCharacter
 let currentComments
@@ -42,7 +42,7 @@ Promise.all([
     })
 }
 
-// Declare and define functions
+{ /* Function Declarations */
 function listCharacters(characters){
     characters.forEach(character => {
         const h5 = document.createElement("h5");
@@ -142,13 +142,4 @@ function submitComment(){
         console.log(currentCharacter.comments)
     })
 }
-
-// function submitComment(){
-//     commentForm.addEventListener("submit", (e)=> {
-//         e.preventDefault()
-//         const p = document.createElement("p")
-//         p.innerText = e.target["comment-input"].value
-//         exComments.append(p)
-//         commentForm.reset()
-//     })
-// }
+}
