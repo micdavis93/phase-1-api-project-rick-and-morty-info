@@ -5,9 +5,9 @@
             "name": "Rick Sanchez",
             "rating": 100,
             "comments": [
-                "Rick Comment 1",
-                "Rick Comment 2",
-                "Rick Comment 3"
+                "Rick is a terrible father",
+                "Better as a pickle",
+                "Pirates of the Pancreas WAS cool"
             ]
         },
         {
@@ -15,9 +15,9 @@
             "name": "Morty Smith",
             "rating": 2,
             "comments": [
-                "Morty Comment 1",
-                "Morty Comment 2",
-                "Morty Comment 3"
+                "Sounds like an old Jewish comedy writer's name",
+                "Aw jeeze",
+                "Really wish I didn't know about the Yosemite shirt..."
             ]
         },
         {
@@ -25,9 +25,9 @@
             "name": "Summer Smith",
             "rating": 3,
             "comments": [
-                "Summer Comment 1",
-                "Summer Comment 2",
-                "Summer Comment 3"
+                "Summer is, like, totally carpe-ing all those diems",
+                "Summer is safe",
+                "ts ts ts ts (snake jazz!)"
             ]
         },
         {
@@ -35,9 +35,9 @@
             "name": "Beth Smith",
             "rating": 4,
             "comments": [
-                "Beth Comment 1",
-                "Beth Comment 2",
-                "Beth Comment 3"
+                "The mind of a robot and the heart of an insect",
+                "Just as arrogant and irresponsible as Rick.",
+                "I'll never forgive her for Mr. Poopy Buthhole"
             ]
         },
         {
@@ -45,9 +45,9 @@
             "name": "Jerry Smith",
             "rating": 5,
             "comments": [
-                "Jerry Comment 1",
-                "Jerry Comment 2",
-                "Jerry Comment 3"
+                "A literal worm",
+                "World's most punchable man",
+                "How can someone mess up wearing shoes?"
             ]
         }
     ]
