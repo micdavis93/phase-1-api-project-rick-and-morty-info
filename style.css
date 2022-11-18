@@ -1,5 +1,6 @@
 /* Tags */
 body {
+    /* position: relative; */
     background-color: black;
     color: #48f4eb;
 }
@@ -39,49 +40,54 @@ h5 {
     width: 80%;
 }
 
-#character-list {
-    display: block;
+#left-side-bar {
+    display: inline-block;
+    position: relative;
     width: 20%;
-    float: left;
-    text-align: right;
+    /* margin-right: auto; */
+    /* left: 0; */
 }
+
+#nav-header {
+    /* display: block; */
+    text-align: right;
+    position: relative:
+}
+
+#character-nav {
+    /* display: block; */
+    /* float: right; */
+    text-align: right;
+    font-family: Syne Mono;
+}
+
 
 #current-character {
-    /* display: block; */
+    display: inline-block;
     position: relative;
     width: 75%;
-    margin-left: auto;
-}
-
-#character-info {
-    display: block;
-    position: relative;
-    width: 100%;
-    /* float: right; */
+    margin-left: 30px;
+    top: 80px;
 }
 
 #name-and-image {
-    display: block;
+    display: inline-block;
+    position: relative;
     width: 45%;
-    float: left;
+    /* float: left; */
+    top: 0%;
 }
 
 #status-and-origin {
     /* float:right; */
-    position: relative;
+    /* position: relative; */
     text-align: left;
+    /* display: inline-block */
 }
 
 #comments-section {
-    display: block;
-    float: left;
-}
-
-#character-list h2 {
-    font-family: Gloria Hallelujah;  
-}
-
-#character-nav {
+    /* display: block; */
+    /* float: left; */
     font-family: Syne Mono;
 }
 
@@ -112,13 +118,17 @@ h5 {
 }
 
 #character-image {
-    display: block;
+    /* display: block; */
     border: 3px solid #48f4eb;
     border-radius: 20px;
 }
 
 #jerry-rating {
-    position: relative;
+    bottom: 0;
+    display: inline-flex;
+    height: 170px;
+    font-size: 20px;
+    margin: 10px;
 }
 
 #jerry-rating img {
