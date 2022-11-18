@@ -20,7 +20,6 @@ const commentsForm = document.querySelector("#comments-form")
 const comments = document.querySelector("#comments-list")
 }
 
-//
 { /* Get Request*/
 Promise.all([
     fetch("https://rickandmortyapi.com/api/character").then(r => r.json()),
